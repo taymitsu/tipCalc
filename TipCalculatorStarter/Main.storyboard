@@ -2,9 +2,10 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,19 +17,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uae-ci-apE">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0GD-Fe-iW3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fdx-SC-jDh">
+                                <rect key="frame" x="15" y="109" width="345" height="213"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hh0-ro-bkh">
+                                <rect key="frame" x="15" y="346" width="345" height="213"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ngs-WQ-D7X">
+                                <rect key="frame" x="15" y="583" width="345" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Fvo-x7-pEe"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" name="tcDarkBlue"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" name="tcOffWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ngs-WQ-D7X" secondAttribute="trailing" constant="15" id="0wQ-Ex-uVK"/>
+                            <constraint firstItem="ngs-WQ-D7X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="4Jb-L3-jwY"/>
+                            <constraint firstItem="ngs-WQ-D7X" firstAttribute="top" secondItem="hh0-ro-bkh" secondAttribute="bottom" constant="24" id="4hD-IV-030"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fdx-SC-jDh" secondAttribute="trailing" constant="15" id="CoB-tL-mS3"/>
+                            <constraint firstItem="Fdx-SC-jDh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Jiz-4c-yF7"/>
+                            <constraint firstItem="0GD-Fe-iW3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KKK-v4-EYD"/>
+                            <constraint firstItem="0GD-Fe-iW3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="LaN-ez-TV5"/>
+                            <constraint firstItem="Fdx-SC-jDh" firstAttribute="top" secondItem="0GD-Fe-iW3" secondAttribute="bottom" constant="24" id="PFZ-tx-ig1"/>
+                            <constraint firstItem="hh0-ro-bkh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Xc1-51-LdQ"/>
+                            <constraint firstItem="hh0-ro-bkh" firstAttribute="height" secondItem="Fdx-SC-jDh" secondAttribute="height" id="YmJ-Vf-0gi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ngs-WQ-D7X" secondAttribute="bottom" constant="24" id="a4G-RC-Gia"/>
+                            <constraint firstItem="0GD-Fe-iW3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ahM-2c-rMu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hh0-ro-bkh" secondAttribute="trailing" constant="15" id="igT-7g-Dra"/>
+                            <constraint firstItem="hh0-ro-bkh" firstAttribute="top" secondItem="Fdx-SC-jDh" secondAttribute="bottom" constant="24" id="odh-WV-SEO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="0GD-Fe-iW3" secondAttribute="bottom" constant="-85" id="uNh-An-N2j"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
+            <point key="canvasLocation" x="31.199999999999999" y="32.833583208395808"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="tcDarkBlue">
+            <color red="0.16899999976158142" green="0.17599999904632568" blue="0.36100000143051147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tcOffWhite">
+            <color red="0.96899998188018799" green="0.96899998188018799" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
